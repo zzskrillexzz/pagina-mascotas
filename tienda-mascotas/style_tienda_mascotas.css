@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #F4F4F4;
+  color: #1F3C88;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ya lo tienes bien */
+  height: 280px;
+  width: 100%;
+  background-color: #1F3C88;
+  border-radius: 15px;
+  padding: 0 30px;
+  overflow: hidden;
+  gap: 10px; /* 🔽 Reduce separación entre texto y logo */
+  
+}
+
+header {
+  margin-bottom: 20px; /* ✅ agrega espacio debajo del header */
+}
+
+
+/* Texto que reemplaza el banner */
+#banner-texto {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#banner-texto h1 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: pre-line;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* “Centro” en color mostaza */
+#banner-texto .resaltado {
+  color: #F9A825;
+}
+
+/* Logo circular */
+#logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* NAV */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background-color: #4F5D75;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #1F3C88;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido-principal {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* TARJETAS */
+.tarjetas-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tarjeta {
+  background-color: #D9D9D9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
+.tarjeta img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tarjeta h3 {
+  margin-bottom: 10px;
+  color: #1F3C88;
+}
+
+.tarjeta p {
+  color: #333;
+}
+
+/* FORMULARIO */
+.formulario-cita {
+  flex: 1;
+  background-color: #4F5D75;
+  color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.formulario-cita h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.formulario-cita form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-cita label {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-cita input {
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.formulario-cita button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #F9A825;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-cita button:hover {
+  background-color: #fbc02d;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1F3C88;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-nombre {
+  font-size: 16px;
+  font-weight: 600;
+  color: #F9A825;
+}
+
+.footer-info {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.footer-derechos {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+.pagina-servicios .tarjetas-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta con transición al pasar el mouse */
+.pagina-servicios .tarjeta {
+  background-color: #D9D9D9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+/* 🔁 Efecto hover sobre la tarjeta entera */
+.pagina-servicios .tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.pagina-servicios .tarjeta img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ---------- PRODUCTOS ---------- */
+.pagina-productos .tarjetas-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagina-productos .tarjeta {
+  background-color: #D9D9D9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.pagina-productos .tarjeta:hover {
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.pagina-productos .tarjeta img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-productos .tarjeta h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1F3C88;
+}
+
+.pagina-productos .tarjeta p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* ---------- GUARDERÍA ---------- */
+.pagina-guarderia .tarjetas-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagina-guarderia .tarjeta {
+  background-color: #D9D9D9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.pagina-guarderia .tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.pagina-guarderia .tarjeta img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-guarderia .tarjeta h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1F3C88;
+}
+
+.pagina-guarderia .tarjeta p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* ---------- PROMOCIONES ---------- */
+.pagina-promociones .tarjetas-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagina-promociones .tarjeta {
+  background-color: #D9D9D9;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 15px;
+  transition: transform 0.2s ease;
+}
+
+.pagina-promociones .tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.pagina-promociones .tarjeta img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagina-promociones .tarjeta h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1F3C88;
+}
+
+.pagina-promociones .tarjeta p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* ---------- RESEÑAS ---------- */
+.reseñas {
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+}
+
+.reseñas h2 {
+  font-size: 22px;
+  color: #1F3C88;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bloque-reseñas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.reseña {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #333;
+}
+
+.reseña span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #F9A825;
+}
+
+
+
